@@ -1,44 +1,0 @@
-
-com.infosys.project.order.controller.OrderController#changeOrderStatus(Ljava/lang/Integer;Ljava/lang/String;)Ljava/lang/String;x
-lC:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/controller/OrderController.java˜ ˜("startingBlock*ª
-startingBlockx
-lC:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/controller/OrderController.java˜ ˜(Zç
-ä
-x
-lC:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/controller/OrderController.java˜> ˜(K
-%2"
-__annotate*86
-4org.springframework.web.bind.annotation.PathVariable*
-
-statusjava.lang.String¯
-¬
-x
-lC:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/controller/OrderController.java˜S ˜(Y
-statusjava.lang.String"__annotation*
-
-%2*
-1*ß
-1x
-lC:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/controller/OrderController.java™	 ™(…
-‚
-x
-lC:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/controller/OrderController.java™	 ™(4
-%0.com.infosys.project.order.service.OrderService"__id*J*H6
-4com.infosys.project.order.controller.OrderController"
-orderServiceÀ½
-x
-lC:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/controller/OrderController.java™	 ™(8
-%1java.lang.String"ycom.infosys.project.order.service.OrderService#changeOrderStatus(Ljava/lang/Integer;Ljava/lang/String;)Ljava/lang/String;*6
-4
-%0.com.infosys.project.order.service.OrderService*
-
-orderidjava.lang.Integer*
-
-statusjava.lang.String28changeOrderStatus(Ljava/lang/Integer;Ljava/lang/String;)"”
-x
-lC:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/controller/OrderController.java™ ™(9
-
-%1java.lang.String:
-orderidjava.lang.Integer:
-statusjava.lang.StringB86
-4com.infosys.project.order.controller.OrderController

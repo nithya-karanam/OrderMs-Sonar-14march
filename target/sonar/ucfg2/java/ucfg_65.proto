@@ -1,16 +1,0 @@
-
-Gcom.infosys.project.order.dto.OrderDTO#getProdOrdered()Ljava/util/List;h
-^C:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/dto/OrderDTO.java (,"1*»
-1h
-^C:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/dto/OrderDTO.java	 (Æ
-Ã
-h
-^C:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/dto/OrderDTO.java	 (
-%0java.util.List"__id*;*9(
-&com.infosys.project.order.dto.OrderDTO"
-prodOrdered"‚
-h
-^C:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/dto/OrderDTO.java (
-
-%0java.util.ListB*(
-&com.infosys.project.order.dto.OrderDTO

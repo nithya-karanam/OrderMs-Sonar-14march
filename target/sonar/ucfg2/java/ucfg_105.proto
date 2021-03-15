@@ -1,16 +1,0 @@
-
-Jcom.infosys.project.order.service.KafkaConsumer#getMsg()Ljava/lang/String;q
-gC:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/service/KafkaConsumer.java ("1*Û
-1q
-gC:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/service/KafkaConsumer.java	 (Ò
-Ï
-q
-gC:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/service/KafkaConsumer.java	 (
-%0java.lang.String"__id*<*:1
-/com.infosys.project.order.service.KafkaConsumer"
-msg"
-q
-gC:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/service/KafkaConsumer.java (
-
-%0java.lang.StringB31
-/com.infosys.project.order.service.KafkaConsumer
