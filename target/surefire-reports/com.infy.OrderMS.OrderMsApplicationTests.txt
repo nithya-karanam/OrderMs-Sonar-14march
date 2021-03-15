@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.infy.OrderMS.OrderMsApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.099 s <<< FAILURE! - in com.infy.OrderMS.OrderMsApplicationTests
+initializationError(com.infy.OrderMS.OrderMsApplicationTests)  Time elapsed: 0.01 s  <<< ERROR!
+java.lang.Exception: The class com.infy.OrderMS.OrderMsApplicationTests is not public.
+
+initializationError(com.infy.OrderMS.OrderMsApplicationTests)  Time elapsed: 0 s  <<< ERROR!
+java.lang.Exception: Test class should have exactly one public constructor
+
