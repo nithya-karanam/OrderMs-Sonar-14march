@@ -3,7 +3,9 @@ package com.infosys.project.order.controller;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,7 +37,6 @@ import com.infosys.project.order.dto.OrderDTO;
 import com.infosys.project.order.dto.ProductsDTO;
 import com.infosys.project.order.dto.ProductsOrderedDTO;
 import com.infosys.project.order.dto.newPlaceOrder;
-import com.infosys.project.order.dto.placeOrderDTO;
 import com.infosys.project.order.service.KafkaConsumer;
 import com.infosys.project.order.service.OrderService;
 
@@ -56,6 +57,8 @@ public class OrderController {
 	
 	@Value("${cart.deleteuri}")
 	String carturl;
+	@Value("${cart.rewarduri}")
+	String cartrewardUrl;
 	@Value("${product.uri}")
 	String producturl;
 
@@ -67,6 +70,12 @@ public class OrderController {
 		return orderService.getSpecificOrderDetails(orderid);
 	}
 	
+	@GetMapping(value = "/orders",  produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<OrderDTO> getAllOrderDetails() {
+		logger.info("Orderdetails");
+
+		return orderService.getOrderDetails();
+	}
 	
 	//Removes products from the cart
       @DeleteMapping(value="/cart/delete/{buyerId}/{prodId}")
@@ -86,20 +95,27 @@ public class OrderController {
 		RestTemplate restTemp=new RestTemplate();
 		//Fetching cartdetails using kafka
 		CartDTO cartDto=orderService.getCart();
-	
+	System.out.println("1");
 		//To fetch productdetails from ProductMs
 		String urlprod=producturl+"/products";
 		String prodDto=restTemp.getForObject(urlprod, String.class);
 		ProductsDTO[] prodlist1=mapper.readValue(prodDto, ProductsDTO[].class);
 		List<ProductsDTO> prodDtolist=Arrays.asList(mapper.readValue(prodDto, ProductsDTO[].class));
-		
+		System.out.println("2");
 		Double totalamount=orderService.placeOrder(cartDto,prodDtolist);
-		
-       // Updating the database		
+		String checkstockurl=producturl+"/order/checkstock/"+cartDto.getProdId()+"/"+cartDto.getQuantity();
+		restTemp.getForObject(checkstockurl, String.class);
+		System.out.println("3");
+//       // Updating the database		
 		orderService.toDatabase(placeorderDTO, cartDto, prodDtolist, totalamount);	
-		
-		
-		//delete prodoct from cart
+		//delete product from cart
+		//String updatestockurl=producturl+"order/update/";	
+		Map<String, String> params = new HashMap<String, String>();
+       params.put("prodid", String.valueOf(cartDto.getProdId()));
+
+		restTemp.put(producturl+"order/update/"+cartDto.getProdId(),cartDto.getQuantity(),params);
+	System.out.println("3");
+	//to delete 
           delete(cartDto.getBuyerId(),cartDto.getProdId());
 	
 		String successMessage = environment.getProperty("ORDER_PLACED_SUCCESSFULLY");

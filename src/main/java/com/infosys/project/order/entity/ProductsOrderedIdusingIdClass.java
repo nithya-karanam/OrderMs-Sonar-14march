@@ -3,23 +3,20 @@ package com.infosys.project.order.entity;
 import java.io.Serializable;
 
 import javax.annotation.sql.DataSourceDefinition;
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
-@NoArgsConstructor
+@Embeddable
 public class ProductsOrderedIdusingIdClass implements Serializable {
+	@Column(name="orderid")
 	private int orderid;
+	@Column(name="prodid",nullable=false)
 	private int prodid;
 	
-	public ProductsOrderedIdusingIdClass() {
-		
-	}
-	public ProductsOrderedIdusingIdClass(int orderid,int prodid) {
-		this.orderid=orderid;
-		this.prodid=prodid;
-	}
+
 	public void setOrderid(int orderid) {
 		this.orderid = orderid;
 	}

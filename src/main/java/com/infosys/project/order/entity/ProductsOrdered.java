@@ -17,12 +17,11 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "productsordered")
 @IdClass(value=ProductsOrderedIdusingIdClass.class)
-@Data
-@NoArgsConstructor
 public class ProductsOrdered {
 	@Id
 	private int orderid;
 	@Id
+	@Column(nullable=false)
 	private int prodid;
 	@Column(nullable = false)
 	private int sellerid;

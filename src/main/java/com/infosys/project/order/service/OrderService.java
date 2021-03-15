@@ -1,6 +1,7 @@
 package com.infosys.project.order.service;
 
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -21,7 +22,7 @@ import com.infosys.project.order.dto.OrderDTO;
 import com.infosys.project.order.dto.ProductsDTO;
 import com.infosys.project.order.dto.ProductsOrderedDTO;
 import com.infosys.project.order.dto.newPlaceOrder;
-import com.infosys.project.order.dto.placeOrderDTO;
+
 import com.infosys.project.order.entity.OrderDetails;
 import com.infosys.project.order.entity.ProductsOrdered;
 import com.infosys.project.order.entity.ProductsOrderedIdusingIdClass;
@@ -36,6 +37,20 @@ public class OrderService {
 	ProductsOrderedRepo productRepo;
 	@Autowired
 	KafkaConsumer kafka;
+	
+	public List<OrderDTO> getOrderDetails() {
+
+		List<OrderDetails> orders = orderRepo.findAll();
+		List<OrderDTO> orderDTOs = new ArrayList<>();
+
+		for (OrderDetails order:orders) {
+			OrderDTO orderDTO = OrderDTO.valueOf(order);
+			orderDTOs.add(orderDTO);
+		}
+		logger.info("Order details : {}", orderDTOs);
+		return orderDTOs;
+	}
+	
 	
 	public CombinedDTO getSpecificOrderDetails(int orderid) {
 		CombinedDTO newDTO=null;
@@ -104,9 +119,12 @@ public class OrderService {
 		     }
 
     public void reOrder(Integer orderId,Integer prodId) throws Exception{
-	     Date date=new Date();
+	     Date date = new Date();
 	     Optional<OrderDetails> order=orderRepo.findById(orderId);
-	     Optional<ProductsOrdered> products= productRepo.findById(new ProductsOrderedIdusingIdClass(orderId, prodId));
+	     ProductsOrderedIdusingIdClass ck=new ProductsOrderedIdusingIdClass();
+	     ck.setOrderid(orderId);
+	     ck.setProdid(prodId);
+	     Optional<ProductsOrdered> products= productRepo.findById(ck);
 	     OrderDTO orderDto=null;
 	     OrderDetails orderEntity=null;
 	     ProductsOrdered prodentity=null;
