@@ -1,6 +1,7 @@
 package com.infosys.project.order.dto;
 
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -12,7 +13,7 @@ public class CombinedDTO {
 	private int orderid;
 	private int buyerid;
 	private double amount;
-	private Date date;
+	private LocalDate date;
 	private String address;
 	private String status;
 	List<ProductsOrderedDTO> productsOrdered;
@@ -35,10 +36,11 @@ public class CombinedDTO {
 	public void setAmount(double amount) {
 		this.amount = amount;
 	}
-	public Date getDate() {
+	
+	public LocalDate getDate() {
 		return date;
 	}
-	public void setDate(Date date) {
+	public void setDate(LocalDate date) {
 		this.date = date;
 	}
 	public String getAddress() {

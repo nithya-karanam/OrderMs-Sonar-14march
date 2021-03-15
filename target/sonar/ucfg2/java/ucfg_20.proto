@@ -1,0 +1,102 @@
+
+çcom.infosys.project.order.dto.CombinedDTO#valueOf(Lcom/infosys/project/order/entity/OrderDetails;)Lcom/infosys/project/order/dto/CombinedDTO;k
+aC:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/dto/CombinedDTO.java@ @(""1*∂"
+1k
+aC:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/dto/CombinedDTO.javaA A((Ã…
+k
+aC:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/dto/CombinedDTO.javaA A(&/
+%0)com.infosys.project.order.dto.CombinedDTO")com.infosys.project.order.dto.CombinedDTOﬁ
+€
+k
+aC:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/dto/CombinedDTO.javaA A((
+%1"3com.infosys.project.order.dto.CombinedDTO#<init>()V*1
+/
+%0)com.infosys.project.order.dto.CombinedDTO‡
+›
+k
+aC:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/dto/CombinedDTO.javaA A()5
+orderDTO)com.infosys.project.order.dto.CombinedDTO"__id*1
+/
+%0)com.infosys.project.order.dto.CombinedDTOáÑ
+k
+aC:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/dto/CombinedDTO.javaB B(/	
+%2int";com.infosys.project.order.entity.OrderDetails#getOrderid()I*?
+=
+orderDetails-com.infosys.project.order.entity.OrderDetails2getOrderid()ãà
+k
+aC:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/dto/CombinedDTO.javaB B(0
+
+%3void"8com.infosys.project.order.dto.CombinedDTO#setOrderid(I)V*7
+5
+orderDTO)com.infosys.project.order.dto.CombinedDTO*
+	
+%2int2setOrderid(I)áÑ
+k
+aC:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/dto/CombinedDTO.javaC C(/	
+%4int";com.infosys.project.order.entity.OrderDetails#getBuyerid()I*?
+=
+orderDetails-com.infosys.project.order.entity.OrderDetails2getBuyerid()ãà
+k
+aC:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/dto/CombinedDTO.javaC C(0
+
+%5void"8com.infosys.project.order.dto.CombinedDTO#setBuyerid(I)V*7
+5
+orderDTO)com.infosys.project.order.dto.CombinedDTO*
+	
+%4int2setBuyerid(I)£†
+k
+aC:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/dto/CombinedDTO.javaD D(-
+%6java.lang.Double"Kcom.infosys.project.order.entity.OrderDetails#getAmount()Ljava/lang/Double;*?
+=
+orderDetails-com.infosys.project.order.entity.OrderDetails2getAmount()ñì
+k
+aC:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/dto/CombinedDTO.javaD D(.
+
+%7void"7com.infosys.project.order.dto.CombinedDTO#setAmount(D)V*7
+5
+orderDTO)com.infosys.project.order.dto.CombinedDTO*
+
+%6java.lang.Double2setAmount(D)õò
+k
+aC:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/dto/CombinedDTO.javaE E()
+%8java.util.Date"Gcom.infosys.project.order.entity.OrderDetails#getDate()Ljava/util/Date;*?
+=
+orderDetails-com.infosys.project.order.entity.OrderDetails2	getDate()Æ´
+k
+aC:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/dto/CombinedDTO.javaE E(*
+
+%9void"Dcom.infosys.project.order.dto.CombinedDTO#setDate(Ljava/util/Date;)V*7
+5
+orderDTO)com.infosys.project.order.dto.CombinedDTO*
+
+%8java.util.Date2setDate(Ljava/util/Date;)¶£
+k
+aC:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/dto/CombinedDTO.javaF F(/
+%10java.lang.String"Lcom.infosys.project.order.entity.OrderDetails#getAddress()Ljava/lang/String;*?
+=
+orderDetails-com.infosys.project.order.entity.OrderDetails2getAddress()ºπ
+k
+aC:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/dto/CombinedDTO.javaF F(0
+%11void"Icom.infosys.project.order.dto.CombinedDTO#setAddress(Ljava/lang/String;)V*7
+5
+orderDTO)com.infosys.project.order.dto.CombinedDTO*
+
+%10java.lang.String2setAddress(Ljava/lang/String;)§°
+k
+aC:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/dto/CombinedDTO.javaG G(.
+%12java.lang.String"Kcom.infosys.project.order.entity.OrderDetails#getStatus()Ljava/lang/String;*?
+=
+orderDetails-com.infosys.project.order.entity.OrderDetails2getStatus()∫∑
+k
+aC:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/dto/CombinedDTO.javaG G(/
+%13void"Hcom.infosys.project.order.dto.CombinedDTO#setStatus(Ljava/lang/String;)V*7
+5
+orderDTO)com.infosys.project.order.dto.CombinedDTO*
+
+%12java.lang.String2setStatus(Ljava/lang/String;)"¶
+k
+aC:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/dto/CombinedDTO.javaH H(7
+5
+orderDTO)com.infosys.project.order.dto.CombinedDTO:=
+orderDetails-com.infosys.project.order.entity.OrderDetailsB-"+
+)com.infosys.project.order.dto.CombinedDTO

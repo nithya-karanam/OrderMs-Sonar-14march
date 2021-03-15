@@ -22,7 +22,6 @@ import com.infosys.project.order.dto.OrderDTO;
 import com.infosys.project.order.dto.ProductsDTO;
 import com.infosys.project.order.dto.ProductsOrderedDTO;
 import com.infosys.project.order.dto.newPlaceOrder;
-
 import com.infosys.project.order.entity.OrderDetails;
 import com.infosys.project.order.entity.ProductsOrdered;
 import com.infosys.project.order.entity.ProductsOrderedIdusingIdClass;
@@ -90,7 +89,7 @@ public class OrderService {
 	return cost;
 }
    public void toDatabase(newPlaceOrder placeOrder,CartDTO cart,List<ProductsDTO> prodlist, double totalAmount) {
-	  Date date=new Date();
+	  LocalDate date =LocalDate.now();
 	  
 	  OrderDetails order=new OrderDetails();
 	      order.setBuyerid(placeOrder.getBuyerid());
@@ -119,7 +118,7 @@ public class OrderService {
 		     }
 
     public void reOrder(Integer orderId,Integer prodId) throws Exception{
-	     Date date = new Date();
+	     LocalDate date=LocalDate.now();
 	     Optional<OrderDetails> order=orderRepo.findById(orderId);
 	     ProductsOrderedIdusingIdClass ck=new ProductsOrderedIdusingIdClass();
 	     ck.setOrderid(orderId);
@@ -221,4 +220,7 @@ public void changeAmountAccordingToRewardPoints(int buyerId,double amount) {
 	    orderRepo.save(order);
 	}
 
-}}
+}
+
+
+}

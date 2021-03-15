@@ -1,0 +1,16 @@
+
+Ncom.infosys.project.order.dto.CombinedDTO#getProductsOrdered()Ljava/util/List;k
+aC:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/dto/CombinedDTO.java9! 9(3"1*Ë
+1k
+aC:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/dto/CombinedDTO.java:	 :(Ð
+Í
+k
+aC:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/dto/CombinedDTO.java:	 :(
+%0java.util.List"__id*B*@+
+)com.infosys.project.order.dto.CombinedDTO"
+productsOrdered"…
+k
+aC:/Users/91967/OrderMs-Sonar-14march/src/main/java/com/infosys/project/order/dto/CombinedDTO.java: :(
+
+%0java.util.ListB-+
+)com.infosys.project.order.dto.CombinedDTO

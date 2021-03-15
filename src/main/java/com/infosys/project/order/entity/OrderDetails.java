@@ -1,6 +1,7 @@
 package com.infosys.project.order.entity;
 
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -26,18 +27,29 @@ public class OrderDetails {
 	@Column(nullable = false)
 	int buyerid;
 	@Column(nullable = false)
-	Double amount;
+	double amount;
 	@Column(nullable = false)
-	Date date;
+	LocalDate date;
 	@Column(nullable = false)
 	String address;
 	@Column(nullable = false)
 	String status;
-	
 	public OrderDetails() {
 		super();
 	}
-
+	public OrderDetails(int i, int j, double d, LocalDate localDate, String string, String string2) {
+		super();
+	}
+	
+//
+//public void OrderDetails(int orderid,int buyerid,double amount,LocalDate date,String address,String status) {
+//	this.orderid=orderid;
+//	this.buyerid=buyerid;
+//	this.amount=amount;
+//	this.date=date;
+//	this.address=address;
+//	this.status=status;
+//}
 	public int getOrderid() {
 		return orderid;
 	}
@@ -55,22 +67,20 @@ public class OrderDetails {
 	}
 
 	
-	public Double getAmount() {
+	public double getAmount() {
 		return amount;
 	}
 
-	public void setAmount(Double amount) {
+	public void setAmount(double amount) {
 		this.amount = amount;
 	}
 
-	public Date getDate() {
+	public LocalDate getDate() {
 		return date;
 	}
-
-	public void setDate(Date date) {
+	public void setDate(LocalDate date) {
 		this.date = date;
 	}
-
 	public String getAddress() {
 		return address;
 	}

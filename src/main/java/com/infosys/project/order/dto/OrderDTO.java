@@ -1,6 +1,7 @@
 package com.infosys.project.order.dto;
 
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -13,24 +14,24 @@ public class OrderDTO {
 	private int orderid;
 	private int buyerid;
 	private Double amount;
-	private Date date;
+	private LocalDate date;
 	private String address;
 	private String status;
-	List<ProductsOrdered> prodOrdered= new ArrayList<ProductsOrdered>();
-
-
-	public List<ProductsOrdered> getProdOrdered() {
-		return prodOrdered;
-	}
-
-	public void setProdOrdered(List<ProductsOrdered> prodOrdered) {
-		this.prodOrdered = prodOrdered;
-	}
+//	List<ProductsOrdered> prodOrdered= new ArrayList<ProductsOrdered>();
+//
+//
+//	public List<ProductsOrdered> getProdOrdered() {
+//		return prodOrdered;
+//	}
+//
+//	public void setProdOrdered(List<ProductsOrdered> prodOrdered) {
+//		this.prodOrdered = prodOrdered;
+//	}
 	public OrderDTO() {
 		super();
 	}
 
-	public OrderDTO(int orderid, int buyerid, double amount,Date date, String address,String status) {
+	public OrderDTO(int orderid, int buyerid, double amount,LocalDate date, String address,String status) {
 		this();
 		this.orderid=orderid;
 		this.buyerid=buyerid;
@@ -63,11 +64,13 @@ public class OrderDTO {
 		this.amount = amount;
 	}
 
-	public Date getDate() {
+	
+
+	public LocalDate getDate() {
 		return date;
 	}
 
-	public void setDate(Date date) {
+	public void setDate(LocalDate date) {
 		this.date = date;
 	}
 

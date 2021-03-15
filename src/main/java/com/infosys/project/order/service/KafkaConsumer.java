@@ -9,18 +9,18 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class KafkaConsumer {
-	private String msg;
+	String msg;
 
+	
 	public String getMsg() {
 		return msg;
 	}
-
 	public void setMsg(String msg) {
 		this.msg = msg;
 	}
 	@KafkaListener(topics="TestTopic",groupId="group_id",containerFactory = "concurrentKafkaListenerContainerFactory")
 	public void consume(String message) {
-		msg=(message);
+		msg=message;
 		System.out.println(message);
 	}
 	
